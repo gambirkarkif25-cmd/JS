@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter</title>
+</head>
+<body>
+
+  <button id="plus">+</button>
+  <button id="minus">-</button>
+  <h2 id="count">0</h2>
+
+  <script>
+    let c = 0;
+
+    const plusBtn = document.getElementById("plus");
+    const minusBtn = document.getElementById("minus");
+    const countEle = document.getElementById("count");
+
+    plusBtn.addEventListener("click", increase);
+    minusBtn.addEventListener("click", decrease);
+
+    function increase() {
+      c = c + 1;
+      updateDisplay();
+    }
+
+    function decrease() {
+      c = c - 1;
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      countEle.innerHTML = c;
+
+      if (c % 2 === 0) {
+        countEle.style.color = "pink"; // even
+      } else {
+        countEle.style.color = "blue"; // odd
+      }
+    }
+  </script>
+
+</body>
+</html>

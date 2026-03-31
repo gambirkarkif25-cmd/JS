@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Connecting js to html</h2>
+    <p id="text">this text will change</p>
+    <p>let's display time in our screen.</p>
+    <p id="time">here</p>
+  
+    <input
+      type="button"
+      value="hide text"
+      onclick="document.getElementById('text').style.visibility='hidden'">
+
+   <input
+      type="button"
+      value="visible text"
+      onclick="document.getElementById('text').style.visibility='visible'">
+<br>
+<br>
+      <button id="btn">+</button>
+    <p id="count">0</p>
+    <script>
+    const btn= document.getElementById("btn")
+      let c=0;
+      btn.addEventListener("click", onclick)
+      function onclick(){document.getElementById("count")
+      const countEle=document.getElementById("count")
+      c=c+1
+      countEle.innerHTML=c
+      c%2==0?
+      countEle.style.color="pink":
+      countEle.style.color="white"}
+    </script>
+  
+  
+ 
+     
+    </body>
+  <script>
+    document.getElementById("text").innerHTML = "let's connect js to html";
+    document.getElementById("time").innerHTML = "Date:" + Date();
+  </script>
+  </script>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Increase Font Size</title>
+  </head>
+  <body>
+    <h2 id="count">0</h2>
+    <button id="btn">Font size</button>
+
+    <script>
+      let c = 0;
+      let size = 20; // initial font size in px
+
+      const btn = document.getElementById("btn");
+      const countEle = document.getElementById("count");
+
+      btn.addEventListener("click", function () {
+        c = c + 1;
+        size = size + 2; // increase font size each click
+
+        countEle.innerHTML = c;
+        countEle.style.fontSize = size + "px";
+      });
+    </script>
+  </body>
+</html>
